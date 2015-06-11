@@ -1,0 +1,110 @@
+<head>
+    <title>SafariTest</title>
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+
+    <link rel="import" href="/bower_components/iron-iconset/iron-iconset.html">
+    <link rel="import" href="/bower_components/iron-input/iron-input.html">
+    <link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+    <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+
+    <link rel="import" href="/bower_components/iron-collapse/iron-collapse.html">
+
+    <link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="/bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="/bower_components/paper-button/paper-button.html">
+    <link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+    <link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
+
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower_components/paper-item/paper-item.html">
+    <link rel="import" href="/bower_components/paper-item/paper-item-body.html">
+    <link rel="import" href="/bower_components/paper-styles/paper-styles.html">
+
+
+</head>
+
+<body>
+
+</body>
+
+
+<template name="page1">
+    <paper-drawer-panel id="paperDrawerPanel" responsive-width="1024px">
+        <div drawer>
+            {{> app_menu}}
+        </div>
+        <div main>
+            <paper-toolbar class="medium-tall">
+                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                <div title>Page1</div>
+            </paper-toolbar>
+
+            <paper-button raised style="background-color: #4184F3" onclick="Router.go('page2')">Route to Page2</paper-button>
+
+        </div>
+    </paper-drawer-panel>
+
+</template>
+
+<template name="page2">
+    <paper-drawer-panel id="paperDrawerPanel" responsive-width="1024px">
+        <div drawer>
+            {{> app_menu}}
+        </div>
+        <div main>
+            <paper-toolbar class="medium-tall">
+                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                <div title>Page2</div>
+
+            </paper-toolbar>
+
+            <paper-button raised style="background-color: #4184F3" onclick="Router.go('page1')">Route to Page1</paper-button>
+
+        </div>
+    </paper-drawer-panel>
+</template>
+
+<template name="app_menu">
+    <div class="layout vertical" style="height: 200px; background: goldenrod">
+        <div class="layout horizontal">
+            <h2>Header</h2>
+        </div>
+        <div style="overflow: hidden; overflow-y: auto; height: 140px">
+            <div class="layout horizontal" style="background: yellow;" >
+                <p>aaa</p> <h2>Item 1</h2>
+            </div>
+            <div class="layout horizontal" >
+                <h2>Item 2</h2>
+            </div>
+            <div class="layout horizontal" style="background: yellow;">
+                <h2>Item 3</h2>
+            </div>
+            <div class="layout horizontal" >
+                <h2>Item 4</h2>
+            </div>
+            <div class="layout horizontal" style="background: yellow;" >
+                <h2>Item 5</h2>
+            </div>
+            <div class="layout horizontal" >
+                <h2>Item 6</h2>
+            </div>
+            <div class="layout horizontal" style="background: yellow;" >
+                <h2>Item 7</h2>
+            </div>
+            <div class="layout horizontal">
+                <h2>Item 8</h2>
+            </div>
+            <div class="layout horizontal" style="background: yellow;" >
+                <h2>Item 9</h2>
+            </div>
+        </div>
+    </div>
+</template>
+
